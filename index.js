@@ -1,7 +1,7 @@
 // Import stylesheets
 import './style.css';
 // import leaflet
-import { Map, TileLayer, Control } from 'leaflet';
+import { Map, TileLayer, Control, Marker, Icon } from 'leaflet';
 
 // create Map
 const map = new Map('map');
@@ -36,3 +36,12 @@ const layerContral = new Control.Layers({
 });
 // addmap
 layerContral.addTo(map);
+const Mark = new Marker([39.90960456049752, 116.3972282409668], {
+  icon:new Icon({
+    iconurl:"",
+    iconSize:[25,41],
+    iconAnchor:[16,32]
+
+  })
+});
+Mark.addTo(map);
